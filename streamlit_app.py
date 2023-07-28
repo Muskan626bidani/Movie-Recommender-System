@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pickle
 import pandas as pd
@@ -13,12 +14,12 @@ def fetch_poster(movie_id):
 
 def recommend (movie):
   # find the index of array and then goes into similarity matix
-  movie_list=similarity[movie];
-    
+  movies_list=similarity[movie];
+
   # movie_index=movies[movies['title'].values==movie].index[0]
   # distances=similarity[movie_index]
   # movies_list=sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:7]
-  # recommend_movies=[]
+  recommend_movies=[]
   # recommend_movies_poster=[]
   for i in movies_list:
   #   # print(new_df['title'][i[0]])
@@ -50,4 +51,3 @@ if st.button('Recommend'):
     with col5:
         st.text(name[4])
         # st.image(poster[4])
-
